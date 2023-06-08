@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { Password as PasswordType } from "../types";
 
-interface Props {
+interface PasswordProps {
   data: PasswordType;
   color?: string;
 }
 
 const obfuscatePassword = (password: string) => "•".repeat(password.length);
 
-const Password = ({ data, color }: Props) => {
+const Password = ({ data, color }: PasswordProps) => {
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState(obfuscatePassword(data.password));
 
