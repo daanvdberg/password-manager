@@ -16,10 +16,7 @@ const Form = () => {
 
   const navigate = useNavigate();
 
-  const [passwords, storePassword] = useLocalStorage<Password[]>(
-    "passwords",
-    []
-  );
+  const [, storePassword] = useLocalStorage<Password[]>("passwords", []);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
