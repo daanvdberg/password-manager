@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ClientData } from "../types";
-import clientData from "../client-data.json";
+import clientData from "../data/client-data.json";
 
 type Status = "pending" | "success";
 
