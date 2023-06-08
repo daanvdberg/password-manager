@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { ClientData } from "../types";
 import clientData from "../client-data.json";
 
-const useClients = (): [string, ClientData[]] => {
+type Status = "pending" | "success";
+
+const useClients = (): [Status, ClientData[]] => {
   // Simulate loading state
-  const [status, setStatus] = useState("pending");
+  const [status, setStatus] = useState<Status>("pending");
   const [clients, setClients] = useState<ClientData[]>([]);
 
   useEffect(() => {
